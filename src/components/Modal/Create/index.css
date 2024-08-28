@@ -1,0 +1,113 @@
+.create-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    max-width: 576px;         
+    background-color: #FFFFFF;
+    z-index: 10;
+    border-radius: 10px;
+    gap: 40px;
+}
+
+.create-quiz-text {
+    width: 100%;
+    height: 64px;              
+    padding-left: 16px;       
+    padding-right: 16px;      
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px 0px #00000026;
+}
+
+.create-quiz-text::placeholder {
+    color: #9F9F9F;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 37.5px;
+}
+
+.create-quiz-type-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 8px;      
+    padding-right: 8px;    
+}
+
+.create-quiz-type-text {
+    font-family: 'Poppins', sans-serif; 
+    font-style: normal;
+    font-size: 25px;                   
+    font-weight: 500;                   
+    line-height: 37.5px;                 
+    color: #9F9F9F;                     
+}
+
+.create-quiz-type-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 10px;
+}
+
+.create-quiz-type-btn-unselected {
+    box-shadow: 0px 0px 25px 0px #00000026;
+    background-color: #FFFFFF;
+    color: #9F9F9F;
+}
+
+.create-quiz-type-btn-selected {
+    background-color: #60B84B;
+    color: #ffffff;
+}
+
+.create-quiz-btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.create-quiz-btn-abort {
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 31.5px;
+    text-align: center;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    color: #474444;
+    box-shadow: 0px 0px 15px 0px #00000040;
+}
+
+.create-quiz-btn-continue {
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 31.5px;
+    text-align: center;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+    background-color: #60B84B;
+    color: #ffffff;
+}

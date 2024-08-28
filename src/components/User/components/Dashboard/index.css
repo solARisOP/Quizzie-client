@@ -1,0 +1,181 @@
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.font-jomhuria {
+    font-family: "Jomhuria", serif;
+    font-style: normal;
+}
+
+.dash-layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #EDEDED;
+    overflow: auto;
+}
+
+.dash-head-container {
+    margin-top: 112px;
+    margin-bottom: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.dash-head-stat {
+    width: 320px;
+    background-color: white;
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+.dash-head-stat-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.dash-head-stat-value {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 90px;
+    font-weight: 600;
+}
+
+.dash-head-stat-text {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 600;
+}
+
+.dash-head-suff-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash-main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.dash-main-head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-bottom: 40px;
+}
+
+.dash-main-head-text {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 52.5px;
+    color: #474444;
+    font-weight: 600;
+}
+
+.dash-main-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.dash-main-grid-stat {
+    width: 240px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash-main-grid-stat-quiz {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.dash-main-stat-quiz-text {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 23px;
+    line-height: 34.5px;
+    color: #474444;
+    font-weight: 600;
+}
+
+.dash-main-stat-quiz-value-container {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    align-items: center;
+}
+
+.dash-main-stat-quiz-value {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    color: #FF5D01;
+    font-weight: 600;
+}
+
+.icon-park-outline--eyes {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%23000' stroke-width='4'%3E%3Cpath stroke-linejoin='round' d='M24 41c9.941 0 18-8.322 18-14s-8.059-14-18-14S6 21.328 6 27s8.059 14 18 14Z' clip-rule='evenodd'/%3E%3Cpath stroke-linejoin='round' d='M24 33a6 6 0 1 0 0-12a6 6 0 0 0 0 12Z'/%3E%3Cpath stroke-linecap='round' d='m13.264 11.266l2.594 3.62m19.767-3.176l-2.595 3.62M24.009 7v6'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    color: #FF5D01;
+}
+
+.dash-main-stat-quiz-date-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.dash-main-stat-quiz-date {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    color: #60B84B;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16.5px;
+}

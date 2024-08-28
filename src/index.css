@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+}
+
+input{
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input {
+    background-color: transparent;
+}
+

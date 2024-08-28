@@ -1,0 +1,111 @@
+.stat-layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #EDEDED;
+    overflow: auto;
+}
+
+.stat-quiz-head {
+    width: 100%;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: 80px;
+    padding-inline-end: 40px;
+}
+
+.stat-quiz-name {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 60px;
+    color: #5076FF;
+}
+
+.stat-quiz-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.stat-quiz-info-text {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22.5px;
+    color: #FF5D01;
+}
+
+.stat-quiz-quest-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-inline-start: 80px;
+}
+
+.stat-quiz-quest {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; 
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%;
+}
+
+.stat-quiz-quest-text {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 45px;
+    color: #000000;
+}
+
+.stat-quiz-quest-stat-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-quiz-quest-stat {
+    display: flex;
+    flex-direction: column;
+    width: 256px;               
+    justify-content: center;
+    align-items: center;
+    padding: 12px;              
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.stat-quiz-quest-stat-value {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 45px;
+}
+
+.stat-quiz-quest-stat-text {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.stat-quiz-quest-ruler {
+    margin-top: 48px;           
+    margin-bottom: 48px;       
+    border: 2px solid #D7D7D7;  
+    width: 70%;
+}
