@@ -1,0 +1,78 @@
+.greet-layout {
+    width: 100%;
+    height: 100vh;
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.greet-title-container {
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left:  8px;
+    padding-right: 8px;
+}
+
+.greet-title {
+    text-align: center;
+    color: #474444;
+}
+
+.greet-img-container {
+    width: 400px;
+    height: 400px;
+}
+
+.greet-img {
+    object-fit: contain;
+}
+
+.greet-score-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 20px;
+
+}
+
+.greet-poll-text {
+    font-size: 34px;
+    line-height: 51px;
+    color: #474444;
+    text-align: center;
+}
+
+@media (min-width: 640px) {
+    .greet-layout {
+        height: 600px;
+        max-width: 85%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .greet-score-container {
+        flex-direction: row;
+    }
+
+    .greet-poll-text {
+        font-size: 74px;
+        line-height: 111px;
+        padding-left: 288px;
+        padding-right: 288px;
+    }
+}

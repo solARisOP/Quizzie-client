@@ -1,0 +1,17 @@
+.quiz-layout {
+    width: 100%;
+    height: fit-content;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .quiz-layout {
+        min-height: 100%;
+        background-color: #041325;
+        padding-top: 46px;
+        padding-bottom: 46px;
+    }
+}

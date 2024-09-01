@@ -1,10 +1,12 @@
 .auth-layout {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #F2F2F2;
     overflow: auto;
+    width: 100%;
+    height: fit-content;
+    min-height: 100%;
 }
 
 .auth-top-bar {
@@ -63,4 +65,18 @@
     font-size: 20px;
     line-height: 30px;
     color: #474444;
+}
+
+.auth-invalid-input {
+    border: 1px solid #D60000 !important;
+}
+
+.auth-invalid-input::placeholder {
+    font-family: 'Poppins', serif;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #D60000;
+    padding-inline-start :5px;
 }

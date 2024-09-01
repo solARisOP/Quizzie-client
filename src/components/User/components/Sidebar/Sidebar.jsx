@@ -1,17 +1,67 @@
-import React, { useState } from 'react'
-import CreateQuiz from '../../../Modal/Create/CreateQuiz.jsx';
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom';
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../../../features/quizSlice';
+import {CopyQuiz, EditQuiz, CreateQuiz} from '../../../Modal';
 import './index.css'
+import { toast } from 'react-toastify';
 
 function Sidebar() {
-	const [isModalOpen, setModalOpen] = useState(false);
+	const dispatch = useDispatch()
 
-	const openModal = () => {
-		setModalOpen(true);
-	};
+	const [isCreateModalOpen, setCreateModalOpen] = useState(false);
+	const [isEditModalOpen, setEditModalOpen] = useState(false);
+	const [isCopyModalOpen, setCopyModalOpen] = useState(false);
+
+	const [quizName, setQuizName] = useState("")
+    const [quizType, setQuizType] = useState("")
+	const [quizId, setQuizId] = useState(null);
 
 	const closeModal = () => {
-		setModalOpen(false);
+		setCreateModalOpen(false);
+		setEditModalOpen(false);
+		setCopyModalOpen(false);
+		setQuizName("")
+		setQuizType("")
+		setQuizId(null)
 	};
+
+	const openModal = (value) => {
+		if(!value) {
+			setCreateModalOpen(true);
+		}
+		else if(value == 1) {
+			if(!quizName.trim()) {
+				toast.warning('Quiz name cannot be empty')
+				return
+			}
+			if(!quizType.trim()) {
+				toast.warning('Select a quiz type')
+				return
+			}
+			setCreateModalOpen(false);
+			setEditModalOpen(true);
+		}
+		else {		
+			setEditModalOpen(false);
+			setCopyModalOpen(true);
+			setQuizName("")
+			setQuizType("")
+		}
+	};
+	
+	const logoutUser = async () => {
+
+		try {
+			await axios.post('http://localhost:8000/api/v1/users/logout-user', {}, {
+				withCredentials: true,
+			});
+			dispatch(setUser(null))
+		} catch (error) {
+			console.error(error);	
+		}
+	}
 
 	return (
 		<>
@@ -23,31 +73,34 @@ function Sidebar() {
 						</p>
 					</div>
 					<div className='sidebar-links-container'>
-						<div className='sidebar-btn sidebar-active-btn'>
+						<NavLink className={({isActive})=>`sidebar-btn ${isActive ? "sidebar-active-btn" : ""}`} to={'/user/dashboard'}>
 							<p className='sidebar-btn-text'>
 								Dashboard
 							</p>
-						</div>
-						<div className='sidebar-btn'>
-							<p className='sidebar-btn-text' >
-								Analysis
+						</NavLink>
+						<NavLink className={({isActive})=>`sidebar-btn ${isActive ? "sidebar-active-btn" : ""}`} to={'/user/analysis'}>
+							<p className='sidebar-btn-text'>
+								Analytics
 							</p>
-						</div>
-						<div className='sidebar-btn'>
-							<button className='sidebar-btn-text' onClick={openModal}>
+						</NavLink>
+						<button className='sidebar-btn' onClick={()=>openModal(0)}>
+							<p className='sidebar-btn-text'>
 								Create Quiz
-							</button>
-						</div>
+							</p>
+						</button>
 					</div>
 					<div className='sidebar-logout-container'>
 						<hr className='sidebar-hr' />
-						<p className='sidebar-logout'>
+						<p className='sidebar-logout' onClick={logoutUser}>
 							Logout
 						</p>
 					</div>
 				</div>
 			</div>
-			<CreateQuiz isCreateQuizOpen={isModalOpen} closeCreateQuiz={closeModal}/>
+
+			{isCreateModalOpen && <CreateQuiz isCreateQuizOpen={isCreateModalOpen} closeCreateQuiz={closeModal} openEditQuiz={openModal} setQuizName={setQuizName} setQuizType={setQuizType} quizName={quizName} quizType={quizType} />}
+			{isEditModalOpen && <EditQuiz isEditQuizOpen={isEditModalOpen} closeEditQuiz={closeModal} isNew={1} quizType={quizType} quizName={quizName} openCopyQuiz={openModal} setQuizId={setQuizId} />}
+			{isCopyModalOpen && <CopyQuiz isCopyQuizOpen={isCopyModalOpen} closeCopyQuiz={closeModal} quizId={quizId} />}
 		</>
 	)
 }

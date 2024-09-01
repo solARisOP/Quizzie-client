@@ -48,6 +48,16 @@
     z-index: 30;
 }
 
+.edit-btn-hide {
+    pointer-events: none;
+    display: none;
+}
+
+.edit-btn-show {
+    display: flex;
+    cursor: pointer;
+}
+
 .edit-quests-num-text {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -72,6 +82,14 @@
     color: #969696;
 }
 
+.edit-none {
+    pointer-events: none;
+}
+
+.edit-pointer {
+    cursor: pointer;
+}
+
 .edit-quiz-question-container {
     width: 100%;
     padding-left: 28px;
@@ -84,6 +102,7 @@
     padding-right: 12px;
     width: 100%;
     height: 48px;
+    box-shadow: 0px 0px 25px 0px #00000026;
 }
 
 .edit-question-option-type-container {
@@ -125,13 +144,17 @@
     align-items: flex-start;
 }
 
+.edit-cstm-pad {
+    padding-inline-start: 20px;
+}
+
 .edit-question-options-select-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 36px;
-    margin-right: 8px;
+    margin-inline-end: 8px;
     margin-top: 12px;
 }
 

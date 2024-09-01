@@ -1,7 +1,6 @@
 import React from 'react'
-import Register from './components/Register/Register.jsx'
-import Login from './components/Login/Login.jsx'
 import './index.css'
+import { NavLink, Outlet } from 'react-router-dom'
 
 function Auth() {
   return (
@@ -12,20 +11,20 @@ function Auth() {
                     <p className='auth-text-large'>QUIZZIE</p>
                 </div>
                 <div className='auth-btn-flex-container'>
-                    <div className='auth-btn auth-selected-btn'>
+                    <NavLink className={({ isActive }) => `auth-btn ${isActive ? "auth-selected-btn" : null}`} to={'/auth/signup'}>
                         <p className='auth-text-md'>
                         Sign Up
                         </p>
-                    </div>
-                    <div className='auth-btn'>
+                    </NavLink>
+                    <NavLink className={({ isActive }) => `auth-btn ${isActive ? "auth-selected-btn" : null}`} to={'/auth/login'}>
                         <p className='auth-text-md'>
                         Log In
                         </p>
-                    </div>
+                    </NavLink>
                 </div>
 
             </div>
-            <Register />
+            <Outlet />
         </div>
     </div>
   )

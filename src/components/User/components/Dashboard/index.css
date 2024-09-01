@@ -1,13 +1,3 @@
-.font-poppins {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-}
-
-.font-jomhuria {
-    font-family: "Jomhuria", serif;
-    font-style: normal;
-}
-
 .dash-layout {
     flex: 1;
     display: flex;

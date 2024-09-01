@@ -77,18 +77,18 @@
 }
 
 .sidebar-logout {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
     font-size: 20px;
     line-height: 30px;
     color: #474444;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .sidebar-hr {
     width: 100%;
     border: 1px solid black; 
 }
-
-
-
 

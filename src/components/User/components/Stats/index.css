@@ -8,8 +8,8 @@
 
 .stat-quiz-head {
     width: 100%;
-    margin-top: 3.5rem;
-    margin-bottom: 3.5rem;
+    margin-top: 56px;
+    margin-bottom: 56px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,6 +85,7 @@
     padding: 12px;              
     background-color: #FFFFFF;
     border-radius: 5px;
+    color: #474444;
 }
 
 .stat-quiz-quest-stat-value {
@@ -108,4 +109,39 @@
     margin-bottom: 48px;       
     border: 2px solid #D7D7D7;  
     width: 70%;
+}
+
+.stat-quiz-poll-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+}
+
+.stat-quiz-poll-options {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    width: 208px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    padding-inline-start: 20px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: white;
+    border-radius: 5px;
+    color: #474444;
+}
+
+.stat-quiz-poll-opt-val {
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.stat-quiz-poll-opt-text {
+    font-size: 14px;
+    line-height: 21px;
 }

@@ -40,6 +40,8 @@
 .reg-field-input {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-width: 1px;
+    border-color: white;
     background-color: #F4F4F4;
     padding: 4px;
     width: 45%;
