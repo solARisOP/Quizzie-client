@@ -104,7 +104,7 @@ function Analysis() {
                         <div className='analysis-quiz-update-container'>
                             <BiEdit color={"#854CFF"} size={22} className='analysis-pointer' onClick={editQuiz} data-id={quiz._id}/>
                             <RiDeleteBin6Fill color={"#D60000"} size={22} className='analysis-pointer' onClick={(e)=>openModal(0, e)} data-id={quiz._id}/>
-                            <MdShare color={"#60B84B"} size={22} className='analysis-pointer' onClick={()=>{navigator.clipboard.writeText(`http://localhost:5173/take-quiz?key=${quiz._id}`), toast.success("link copied successfully")}} />
+                            <MdShare color={"#60B84B"} size={22} className='analysis-pointer' onClick={()=>{navigator.clipboard.writeText(`https://quizzie-client-s556.onrender.com/take-quiz?key=${quiz._id}`), toast.success("link copied successfully")}} />
                         </div>
                         <NavLink className='analysis-quiz-link' to={`/user/stats?key=${quiz._id}`} >Question Wise Analysis</NavLink>
                     </div>

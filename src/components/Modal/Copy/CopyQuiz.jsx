@@ -19,7 +19,7 @@ function CopyQuiz({isCopyQuizOpen, closeCopyQuiz, quizId}) {
             <div className='copy-modal-link-container'>
                 <p className='copy-modal-link'>your link is here</p>
             </div>
-            <button className='copy-modal-share-btn' onClick={() => { navigator.clipboard.writeText(`http://localhost:5173/take-quiz?key=${quizId}`), toast.success("link copied sucessfully")}}>
+            <button className='copy-modal-share-btn' onClick={() => { navigator.clipboard.writeText(`https://quizzie-client-s556.onrender.com/take-quiz?key=${quizId}`), toast.success("link copied sucessfully")}}>
                 Share
             </button>
         </div>
