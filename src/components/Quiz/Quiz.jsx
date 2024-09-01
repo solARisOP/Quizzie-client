@@ -32,7 +32,7 @@ function Quiz() {
 				return 
 			}
 
-			const url = `http://localhost:8000/api/v1/analysis/evaluate-score/${data._id}`
+			const url = `https://quizee-server-edxd.onrender.com/api/v1/analysis/evaluate-score/${data._id}`
 			const payload = JSON.stringify(attemptedRef.current)
 
     		const blob = new Blob([payload], { type: 'application/json' });
@@ -80,7 +80,7 @@ function Quiz() {
 		else if(!sent) {
 			try {
 				setSent(1)
-				const res = await axios.post(`http://localhost:8000/api/v1/analysis/evaluate-score/${data._id}`,
+				const res = await axios.post(`https://quizee-server-edxd.onrender.com/api/v1/analysis/evaluate-score/${data._id}`,
 					{
 						questions: attempted
 					},
