@@ -16,7 +16,7 @@ function QuizBody({setOption, id, questions, attempted, nextQuestion, timer}) {
                     {questions[id].relatedOptions.map((ele, idx) => {
                         if (questions[id].questiontype == 'image') {
                             return <div className={`quiz-body-options-box quiz-image-box { ${ele._id == attempted[id].optionId ? "quiz-selected-option" : null}`} onClick={setOption} data-key={ele._id} key={idx}>
-                                <img className='quiz-image' src={src} alt="cannot load image" />
+                                <img className='quiz-image' src={ele.image} alt="cannot load image" />
                             </div>
                         }
                         else if (questions[id].questiontype == 'text') {
@@ -28,7 +28,7 @@ function QuizBody({setOption, id, questions, attempted, nextQuestion, timer}) {
                             return <div className={`quiz-both-box ${ele._id == attempted[id].optionId ? "quiz-selected-option" : null}`} onClick={setOption} data-key={ele._id} key={idx}>
                                 <p className='quiz-both-text'>{ele.text}</p>
                                 <div className='quiz-both-img-box'>
-                                    <img src={src} className='quiz-image' alt="cannot load image" />
+                                    <img src={ele.image} className='quiz-image' alt="cannot load image" />
                                 </div>
                             </div>
                         }
@@ -36,7 +36,7 @@ function QuizBody({setOption, id, questions, attempted, nextQuestion, timer}) {
                 </div>
             </div>
             <div className='quiz-body-btn-container'>
-                <button className='quiz-body-btn' onClick={nextQuestion}>
+                <button className='quiz-body-btn' onClick={()=>nextQuestion(1)}>
                     {questions.length-1 == id ? "SUBMIT" : "NEXT"}
                 </button>
             </div>

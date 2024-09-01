@@ -53,7 +53,7 @@ function Dashboard() {
 				</div>
 			</div>
 
-			<div className='dash-main-container'>
+			{trendingQuizes.length ? <div className='dash-main-container'>
 				<div className='dash-main-head'>
 					<p className='dash-main-head-text'>Trending Quizs</p>
 				</div>
@@ -71,7 +71,8 @@ function Dashboard() {
 						</div>
 					</div>)}
 				</div>
-			</div>
+			</div>:
+			<div></div>}
 		</div>
 	)
 }

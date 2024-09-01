@@ -17,7 +17,7 @@ function CopyQuiz({isCopyQuizOpen, closeCopyQuiz, quizId}) {
                 </p>
             </div>
             <div className='copy-modal-link-container'>
-                <p className='copy-modal-link'>{`http://localhost:5173/take-quiz?key=${quizId}`}</p>
+                <p className='copy-modal-link'>your link is here</p>
             </div>
             <button className='copy-modal-share-btn' onClick={() => { navigator.clipboard.writeText(`http://localhost:5173/take-quiz?key=${quizId}`), toast.success("link copied sucessfully")}}>
                 Share

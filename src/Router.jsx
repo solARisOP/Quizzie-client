@@ -31,6 +31,7 @@ import {
 
 import App from './App.jsx'
 import Loading from './Loading.jsx';
+import NotFound from './NotFound.jsx';
 
 
 function Router() {
@@ -53,6 +54,7 @@ function Router() {
                     <Route path='signup' element={<Register />} />
                 </Route>
                 <Route path='take-quiz' element={<Quiz/>} loader={quizLoader} />
+                <Route path=':blob' element={<NotFound />} />
             </Route>
         )
     )

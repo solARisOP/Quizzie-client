@@ -27,9 +27,6 @@ function Quiz() {
     }, [attempted]);
 
 	useEffect(() => {
-		var obj = {}
-		obj[data._id] = [{ id: data.relatedQuestions[0]._id, optionId: "" }];
-		window.localStorage.setItem("quiz", JSON.stringify(obj))
 		const sendEval = () => {
 			if(sentRef.current) {
 				return 
@@ -40,7 +37,6 @@ function Quiz() {
 
     		const blob = new Blob([payload], { type: 'application/json' });
 			navigator.sendBeacon(url, blob)
-			window.localStorage.removeItem("quiz");
 		}
 
 		window.addEventListener('unload', sendEval)
@@ -57,7 +53,7 @@ function Quiz() {
 						return ele - 1
 					}
 					else {
-						nextQuestion()
+						nextQuestion(0)
 						clearInterval(myInterval)
 						return 0
 					}
@@ -68,13 +64,14 @@ function Quiz() {
 		}
 	}, [id])
 
-	const nextQuestion = async () => {
+	const nextQuestion = async (x) => {
+		if(x && !attempted[id].optionId) {
+			return;
+		}
+
 		if (id < data.relatedQuestions.length - 1) {
 			setAttempted(ele =>{ 
 				var arr = [...ele, { id: data.relatedQuestions[id + 1]._id, optionId: "" }]
-				var obj = {}
-				obj[data._id] = arr;
-				window.localStorage.setItem("quiz", JSON.stringify(obj))
 				return arr
 			})
 			setTimer(data.relatedQuestions[id + 1].timer)
@@ -91,7 +88,6 @@ function Quiz() {
 						withCredentials: true
 					}
 				)
-				window.localStorage.removeItem("quiz");
 				setScore(res.data.data.score)
 				setId(ele => ele + 1)
 				setSent(2)
@@ -108,9 +104,6 @@ function Quiz() {
 		setAttempted(ele => {
 			var arr = [...ele]
 			arr[id].optionId = key
-			var obj = {}
-			obj[data._id] = arr;
-			window.localStorage.setItem("quiz", JSON.stringify(obj))
 			return arr;
 		})
 	}
