@@ -21,6 +21,8 @@ const quizSlice = createSlice({
         setQuizes: (state, action) => {
             const quizes = action.payload
             state.quizes = quizes
+            state.questions = 0
+            state.impression = 0
             for(const quiz of quizes) {
                 state.questions+=quiz.questions.length
                 state.impression+=quiz.impression

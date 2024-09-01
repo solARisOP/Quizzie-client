@@ -11,8 +11,8 @@ function App() {
 	useEffect(() => {
 		const fetchUser = async () => {
 			try {
-				let promise = [axios.get('http://localhost:8000/api/v1/users/get-user', { withCredentials: true }),
-					axios.get('http://localhost:8000/api/v1/analysis/user-quizes', {withCredentials: true})]
+				let promise = [axios.get('https://quizee-server-edxd.onrender.com/api/v1/users/get-user', { withCredentials: true }),
+					axios.get('https://quizee-server-edxd.onrender.com/api/v1/analysis/user-quizes', {withCredentials: true})]
 					
 				promise = await Promise.all(promise)
 				dispatch(setUser(promise[0].data.data.user))

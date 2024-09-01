@@ -86,7 +86,7 @@ function Register() {
 		if(Object.keys(validateErrors).length === 0) {
 			e.target.style.pointerEvents = 'none';
 			try {
-				await axios.post('http://localhost:8000/api/v1/users/register-user', {
+				await axios.post('https://quizee-server-edxd.onrender.com/api/v1/users/register-user', {
 					name : formData.name,
 					email : formData.email,
 					password : formData.password

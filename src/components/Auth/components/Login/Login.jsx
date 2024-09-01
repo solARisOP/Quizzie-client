@@ -54,7 +54,7 @@ function Login() {
 		if (Object.keys(validateErrors).length === 0) {
 			e.target.style.pointerEvents = 'none';
 			try {
-				const res = await axios.post('http://localhost:8000/api/v1/users/login-user', {
+				const res = await axios.post('https://quizee-server-edxd.onrender.com/api/v1/users/login-user', {
 					email: formData.email,
 					password: formData.password
 				}, {

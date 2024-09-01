@@ -52,7 +52,7 @@ function Analysis() {
         const key = e.currentTarget.dataset.id
         try {
             tableRef.current.classList.add('pointer-events-none')
-            const res = await axios.get(`http://localhost:8000/api/v1/quiz/get-quiz?key=${key}`, {
+            const res = await axios.get(`https://quizee-server-edxd.onrender.com/api/v1/quiz/get-quiz?key=${key}`, {
                 withCredentials: true
             })
             setQuiz(res.data.data)
@@ -70,7 +70,7 @@ function Analysis() {
         try {
             closeModal()
             tableRef.current.classList.add('pointer-events-none')
-            await axios.delete(`http://localhost:8000/api/v1/quiz/delete-quiz/${key}`, {withCredentials: true})
+            await axios.delete(`https://quizee-server-edxd.onrender.com/api/v1/quiz/delete-quiz/${key}`, {withCredentials: true})
             dispatch(removeQuiz(quizId))
             toast.success('quiz deleted successfully')
         } catch (error) {

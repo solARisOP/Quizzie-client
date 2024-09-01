@@ -5,7 +5,7 @@ const Loader = async({request}) => {
     const key = url.searchParams.get("key");
 
     try {
-        const res = await axios.get(`http://localhost:8000/api/v1/quiz/get-quiz?key=${key}`, {
+        const res = await axios.get(`https://quizee-server-edxd.onrender.com/api/v1/quiz/get-quiz?key=${key}`, {
             withCredentials: true
         })
         return res.data.data

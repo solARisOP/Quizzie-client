@@ -134,7 +134,7 @@ function EditQuiz({ isEditQuizOpen, closeEditQuiz, isNew, quizType, quizName, op
 
             try {
                 Modalref.current.style.pointerEvents = 'none';
-                await axios.patch(`http://localhost:8000/api/v1/quiz/update-quiz/${quiz._id}`, {
+                await axios.patch(`https://quizee-server-edxd.onrender.com/api/v1/quiz/update-quiz/${quiz._id}`, {
                     questions: editQuestions,
                     options: editOptions
                 }, {
@@ -328,7 +328,7 @@ function EditQuiz({ isEditQuizOpen, closeEditQuiz, isNew, quizType, quizName, op
         }
         try {
             Modalref.current.style.pointerEvents = 'none';
-            const res = await axios.post('http://localhost:8000/api/v1/quiz/create-quiz', quizzie, {
+            const res = await axios.post('https://quizee-server-edxd.onrender.com/api/v1/quiz/create-quiz', quizzie, {
                 withCredentials: true
             })
             dispatch(addQuiz(res.data.data))

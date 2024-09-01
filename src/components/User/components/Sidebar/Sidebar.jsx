@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { setUser } from '../../../../features/quizSlice';
+import { setQuizes, setUser } from '../../../../features/quizSlice';
 import {CopyQuiz, EditQuiz, CreateQuiz} from '../../../Modal';
 import './index.css'
 import { toast } from 'react-toastify';
@@ -54,10 +54,11 @@ function Sidebar() {
 	const logoutUser = async () => {
 
 		try {
-			await axios.post('http://localhost:8000/api/v1/users/logout-user', {}, {
+			await axios.post('https://quizee-server-edxd.onrender.com/api/v1/users/logout-user', {}, {
 				withCredentials: true,
 			});
 			dispatch(setUser(null))
+			dispatch(setQuizes(null))
 		} catch (error) {
 			console.error(error);	
 		}
